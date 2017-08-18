@@ -19,5 +19,10 @@ suite('Timecode: convert ', () => {
 
   test('from frames to timecode', () => {
     assert.equal(Timecode.convertFramesToTimecode(1), '00:00:00:01');
+    assert.equal(Timecode.convertFramesToTimecode(25), '00:00:01:00');
+    assert.equal(Timecode.convertFramesToTimecode(250), '00:00:10:00');
+    assert.equal(Timecode.convertFramesToTimecode(1500), '00:01:00:00');
+    assert.equal(Timecode.convertFramesToTimecode(15000), '00:10:00:00');
+    assert.equal(Timecode.convertFramesToTimecode(90000), '01:00:00:00');
   });
 });
