@@ -15,7 +15,8 @@
     "watch": "babel src --out-dir lib --watch",
     "test": "mocha --ui tdd --compilers js:babel-register",
     "test-es5": "mocha --ui tdd test-es5",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "example": "babel-node ./examples/example.js"
   },
   "babel": {
     "presets": [
